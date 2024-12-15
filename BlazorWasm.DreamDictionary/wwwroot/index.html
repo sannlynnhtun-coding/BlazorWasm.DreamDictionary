@@ -4,15 +4,100 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlazorWasm.DreamDictionary</title>
+    <title>Dream Dictionary</title>
     <base href="/" />
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
+
+    <!--<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />-->
+    <!--<link rel="stylesheet" href="css/app.css" />-->
+
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="BlazorWasm.DreamDictionary.styles.css" rel="stylesheet" />
+
+    <!--<link href="BlazorWasm.DreamDictionary.styles.css" rel="stylesheet" />-->
+
     <link href="manifest.webmanifest" rel="manifest" />
+
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
+
+    <style>
+        body {
+            font-family: sans-serif;
+            /* background-color: #B18CD9; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            /* background-color: #C7AEE4; */
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 90%;
+            /* Adjust width for responsiveness */
+        }
+
+        h1 {
+            color: #7888AF;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            /* Responsive grid */
+            gap: 50px;
+        }
+
+        .card {
+            background-color: #F0F3FC;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+            .card p {
+                margin: 5px 0;
+            }
+
+            .card .letter {
+                font-size: 2em;
+                font-weight: bold;
+            }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+                /* Adjust column width */
+                gap: 20px;
+            }
+
+            .card .letter {
+                font-size: 1.5em;
+                /* Adjust letter size */
+            }
+
+            .card {
+                padding: 5px;
+            }
+        }
+
+        .card:hover {
+            background-color: #7888AF;
+            /* Use the secondary color for hover */
+            color: #C7AEE4;
+            /* Switch text color to the primary color */
+            transition: background-color 0.3s, color 0.3s;
+            /* Add a smooth transition effect */
+            cursor: pointer;
+            /* Change cursor to a pointer hand */
+        }
+    </style>
 </head>
 
 <body>
