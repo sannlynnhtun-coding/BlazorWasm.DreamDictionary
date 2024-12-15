@@ -10,8 +10,7 @@
 {
 	<div class="grid">
 		@{
-			List<MyanmarLetter>
-			alphabet = AlphabetGenerator.GetMyanmarAlphabet();
+			List<MyanmarLetter> alphabet = AlphabetGenerator.GetMyanmarAlphabet();
 			for (int i = 0; i < alphabet.Count; i++)
 			{
 				int id = i + 1;
@@ -114,7 +113,7 @@ else
 			AllDreams = await HttpClient.GetFromJsonAsync<List<DreamEntry>>(apiEndpointDetail);
 		}
 
-		var id = Heads.Where(x => x.Title.Contains(name)).First().GroupId;
+		var id = Heads.Where(x => x.Title.Substring(0, 5).Contains(name)).First().GroupId;
 		Dreams = AllDreams!.Where(x => x.GroupId == id).ToList()!;
 		StateHasChanged();
 	}
