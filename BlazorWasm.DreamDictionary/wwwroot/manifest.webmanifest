@@ -1,6 +1,6 @@
 {
-    "name": "BlazorWasm.DreamDictionary",
-    "short_name": "BlazorWasm.DreamDictionary",
+    "name": "Dream Dictionary",
+    "short_name": "Dream Dictionary",
     "id": "./",
     "start_url": "./",
     "display": "standalone",
